@@ -1,0 +1,10 @@
+<launch>
+	
+	<node pkg="stage_ros" type="stageros" name="stageros" args="$(find beginner_msgsrv)/world/question2.world" 
+	output="screen"/> 
+	<rosparam file="$(find beginner_msgsrv)/config/paramsttask2.yaml" command="load"/>
+	<node pkg="beginner_msgsrv"  name="robot_0" args="0" type="projecttask2.py" output="screen"/>
+	<node pkg="beginner_msgsrv"  name="robot_1" args="1" type="projecttask2.py" output="screen"/>
+
+</launch>
+
